@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智會洞察助理 - Aurora Borealis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ios-bg: #FFFFFF;
+            --ios-system-gray: #F2F2F7;
+            --ios-text: #1C1C1E;
+            --ios-secondary-text: #8E8E93;
+            --ios-accent: #007AFF;
+            --ios-separator: #C6C6C8;
+        }
+
+        html {
+            font-size: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", "Noto Sans TC", sans-serif;
+            background-color: var(--ios-bg);
+            color: var(--ios-text);
+            overflow: hidden;
+            margin: 0;
+        }
+
+        /* iOS Style Scrollbar */
+        ::-webkit-scrollbar { width: 5px; height: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.2); }
+
+        /* Markdown Content - iOS Minimalist */
+        .markdown-content h1 { 
+            font-size: 1.75rem; 
+            font-weight: 800; 
+            margin: 2rem 0 1rem; 
+            color: var(--ios-text); 
+            letter-spacing: -0.04em;
+        }
+        .markdown-content h2 { 
+            font-size: 1.4rem; 
+            font-weight: 700; 
+            margin: 1.75rem 0 0.75rem; 
+            color: var(--ios-text);
+            letter-spacing: -0.03em;
+        }
+        .markdown-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--ios-text);
+            margin: 1.5rem 0 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        .markdown-content p { 
+            margin-bottom: 1rem; 
+            line-height: 1.6; 
+            color: var(--ios-text); 
+            font-weight: 400;
+        }
+        .markdown-content ul, .markdown-content ol { 
+            margin-bottom: 1.25rem; 
+            padding-left: 1.25rem;
+        }
+        .markdown-content ul li { 
+            list-style-type: disc;
+            margin-bottom: 0.5rem;
+            color: var(--ios-text);
+        }
+        .markdown-content ol li {
+            list-style-type: decimal;
+            margin-bottom: 0.5rem;
+            color: var(--ios-text);
+        }
+
+        /* Table Style - iOS Minimalist */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 1.25rem;
+            background: var(--ios-system-gray);
+            border: 1px solid var(--ios-separator);
+        }
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .markdown-content th {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--ios-text);
+            font-weight: 700;
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid var(--ios-separator);
+        }
+        .markdown-content td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--ios-text);
+        }
+        .markdown-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .markdown-content strong {
+            color: var(--ios-text);
+            font-weight: 700;
+        }
+        .markdown-content blockquote { 
+            background: var(--ios-system-gray);
+            border-left: 4px solid var(--ios-text);
+            padding: 1rem 1.25rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--ios-secondary-text);
+        }
+
+        /* Transitions */
+        .ios-transition {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

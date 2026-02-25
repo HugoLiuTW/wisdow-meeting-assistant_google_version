@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", "Noto Sans TC", sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --radius-3xl: 24px;
+  --radius-2xl: 16px;
+  --radius-xl: 12px;
+  
+  --color-ios-bg: #FFFFFF;
+  --color-ios-gray: #F2F2F7;
+  --color-ios-text: #1C1C1E;
+  --color-ios-secondary: #8E8E93;
+  --color-ios-accent: #007AFF;
+  --color-ios-separator: #C6C6C8;
+}
+
+@layer base {
+  body {
+    @apply bg-ios-bg text-ios-text antialiased;
+  }
+}
+
+@layer components {
+  .ios-glass {
+    @apply bg-white/80 backdrop-blur-2xl;
+  }
+  
+  .ios-card {
+    @apply bg-ios-gray rounded-3xl;
+  }
+  
+  .ios-button {
+    @apply rounded-2xl active:scale-95 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
+  }
+  
+  .ios-heading {
+    @apply tracking-tighter font-extrabold text-ios-text;
+  }
+  
+  .ios-label {
+    @apply tracking-widest text-[10px] uppercase text-ios-secondary font-bold;
+  }
+}
